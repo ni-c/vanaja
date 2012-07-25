@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanaja</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Import jQuery (optional) -->
+	<script src="http://code.jquery.com/jquery-1.6.min.js"></script>
+	
+	<!-- Import Rpg.js Beta 2 -->
+	<script src="rpgjs/rpg-beta-2.js"></script>
+
+	<script>
+		var rpg;
+		RPGJS.loadPath = "rpgjs/core/";
+		RPGJS.load(function() {
+			rpg = new Rpg("canvas_rpg");
+			rpg.loadMap('Wald', {
+				tileset: 'terranigma.png',
+				autotiles: ['grass.png','path.png'],
+				player:  {
+					x: 26, 
+					y: 18, 
+					filename: 'ark.png'
+				}
+			}, function () { 
+				rpg.setScreenIn("Player"); 
+			});
+		});	
+	</script>	
+
+ </head>
+ <body style="margin: 0; overflow: hidden; background-color: #000;">
+		<canvas id="canvas_rpg" width="640px" height="480px"></canvas> 
+ </body>
+  
+</html>
