@@ -1,0 +1,36 @@
+
+* {
+	 margin: 0;
+    padding: 0;
+}
+
+body {
+    background: none repeat 0 0 #E3E5E6;
+}
+
+#game {
+    background: none repeat scroll 0 0 #000000;
+    border: 3px solid #333333;
+    box-shadow: 0 0 20px #333333;
+    color: #FFFFFF;
+    height: 600px;
+    left: 50%;
+    margin-left: -400px;
+    position: absolute;
+    top: 100px;
+    width: 800px;
+}
+
+#iframe {
+	overflow: hidden;
+	left: 0;
+	top: 0;
+} 
+
+#canvas_rpg-parent {
+    position: relative;
+}
+
+#canvas_rpg {
+	position: absolute;
+}
