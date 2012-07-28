@@ -3,7 +3,7 @@ vanaja
 
 A classic RPG created with RPGjs.
 
-![Screenshot](https://github.com/ni-c/vanaja/screen.png)
+![Screenshot](https://github.com/ni-c/vanaja/raw/master/screen.png)
 
 Music:
 
