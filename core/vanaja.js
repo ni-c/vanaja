@@ -7,7 +7,7 @@ RPGJS.load({
 	rpg.setVolumeAudio(1);
 				
 	/* Enemy attack action */		
-	rpg.addAction('EnemyAttack', {
+	rpg.addAction('attack_enemy', {
 		action: 'attack',
 		suffix_motion: [''],
 		duration_motion: 1,
@@ -19,13 +19,13 @@ RPGJS.load({
 	rpg.prepareEventAjax('Mushroom');
 				
 	/* Player attack animation */
-	rpg.addAction('MyAttack', {
+	rpg.addAction('attack_player', {
 		action: 'attack',
 		suffix_motion: ['_Attack'],
 		duration_motion: 1,
 		block_movement: true,
-		wait_finish: 5,
-		speed: 10,
+		wait_finish: 0,
+		speed: 16,
 		keypress: [Input.Ctrl]
 	});
 
@@ -40,11 +40,13 @@ RPGJS.load({
 			x: 4, 
 			y: 4, 
 			filename: 'Ark.png',
+			regX: 85, 
+			regY: 100, 
 			actionBattle: {
 				hp_max: 200,
-				actions: ['MyAttack']
+				actions: ['attack_player']
 			},
-			actions: ['MyAttack']
+			actions: ['attack_player']
 		}
 	}, function () { 
 	 	createMonster('Mushroom', 20, 20);
