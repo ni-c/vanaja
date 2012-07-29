@@ -5,7 +5,12 @@ RPGJS.load({
 	}, function() {
 	rpg = new Rpg("canvas_rpg");
 	rpg.setVolumeAudio(1);
-				
+	
+	rpg.setGraphicAnimation(192, 192);
+
+	rpg.addAnimation(Database.animation['enemy_offensive']);
+	rpg.addAnimation(Database.animation['attack_player']);
+			
 	/* Enemy attack action */		
 	rpg.addAction('attack_enemy', {
 		action: 'attack',
@@ -26,7 +31,10 @@ RPGJS.load({
 		block_movement: true,
 		wait_finish: 0,
 		speed: 16,
-		keypress: [Input.Ctrl]
+		keypress: [Input.Ctrl],
+		onStart: function() {
+				rpg.animations['attack_player'].setPositionEvent(rpg.player);				rpg.animations['attack_player'].play();
+		}
 	});
 
 	/* Load the map Wood */
