@@ -1,11 +1,25 @@
 var rpg;
 RPGJS.loadPath = "rpgjs/core/";
-RPGJS.load(function() {
+RPGJS.load({
+		plugins: ["arpg"]
+	}, function() {
 	rpg = new Rpg("canvas_rpg");
 	rpg.setVolumeAudio(1);
 				
+	/* Enemy attack action */		
+	rpg.addAction('EnemyAttack', {
+		action: 'attack',
+		suffix_motion: [''],
+		duration_motion: 1,
+		block_movement: true,
+		wait_finish: 1
+	});
+			
+	/*Prepare to dynamically add events on the map */
+	rpg.prepareEventAjax('Mushroom');
+				
 	/* Player attack animation */
-	rpg.addAction('myattack', {
+	rpg.addAction('MyAttack', {
 		action: 'attack',
 		suffix_motion: ['_Attack'],
 		duration_motion: 1,
@@ -28,14 +42,22 @@ RPGJS.load(function() {
 			filename: 'Ark.png',
 			actionBattle: {
 				hp_max: 200,
-				actions: ['myattack']
+				actions: ['MyAttack']
 			},
-			actions: ['myattack']
+			actions: ['MyAttack']
 		}
 	}, function () { 
+	 	createMonster('Mushroom', 20, 20);
+	 	createMonster('Mushroom', 30, 15);
 		rpg.player.setTypeMove("real");
 		rpg.player.useMouse(false);
 		rpg.setScreenIn("Player"); 
 	});
-Input.lock(rpg.canvas, true);
+	
+	function createMonster(name, x, y) {
+		rpg.setEventPrepared(name, {x: x, y: y});
+		rpg.addEventPrepared(name);
+	}
+	
+	Input.lock(rpg.canvas, true);
 });
