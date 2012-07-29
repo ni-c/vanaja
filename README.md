@@ -1,9 +1,12 @@
-vanaja
+Vanaja
 ======
 
 A classic RPG created with RPGjs.
+---------------------------------
 
-![Screenshot](screen.png)
+Demo: http://vanaja.plyst.net/index.html
+
+![Screenshot](https://github.com/ni-c/vanaja/raw/master/screen.png)
 
 Music:
 
