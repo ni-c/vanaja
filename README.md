@@ -2,9 +2,9 @@
 
 ##A HTML5 RPG, created with the RPGjs Framework
 
-![Screenshot](https://github.com/ni-c/vanaja/raw/master/screen.png)
+![Screenshot](http://ni-c.github.com/vanaja/screen.png)
 
-You can find a playable demo here: http://vanaja.ni-c.de
+You can find a playable demo here: http://ni-c.github.com/vanaja/
 
 ###Credits
 
