@@ -1,0 +1,3 @@
+[submodule "rpgjs"]
+	path = rpgjs
+	url = git@github.com:ni-c/RPGJSv2.git
