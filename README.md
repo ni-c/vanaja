@@ -4,7 +4,7 @@
 
 ![Screenshot](http://ni-c.github.com/vanaja/screen.png)
 
-You can find a playable demo here: http://ni-c.github.com/vanaja/
+You can find a playable demo here: http://vanaja.ni-c.de/
 
 ###Credits
 
